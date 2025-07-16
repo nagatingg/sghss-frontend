@@ -1,5 +1,4 @@
 // src/pages/DashboardMedico.tsx
-
 import { useState, useEffect } from 'react';
 import { Typography, Box, Grid, Paper, List, ListItem, ListItemText, CircularProgress, Divider } from '@mui/material';
 import { useAuth } from '../contexts/AuthContext';
@@ -17,6 +16,8 @@ export default function DashboardMedico() {
         setAgendamentos(data);
         setLoading(false);
       });
+    } else {
+      setLoading(false);
     }
   }, [user]);
 
@@ -31,13 +32,14 @@ export default function DashboardMedico() {
       <Typography variant="h4" component="h1" gutterBottom>Dashboard do Médico</Typography>
       <Typography variant="h6" color="text.secondary" sx={{ mb: 4 }}>Bem-vindo(a), {user?.name}!</Typography>
       <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
+        {/* O 'item' foi removido como propriedade e o Grid foi colocado dentro de outro Grid com as props xs e sm */}
+        <Grid item xs={12} sm={6}>
           <Paper sx={{ p: 2, textAlign: 'center' }}>
             <Typography variant="h4">{consultasHoje.length}</Typography>
             <Typography color="text.secondary">Consultas Hoje</Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} sm={6}>
           <Paper sx={{ p: 2, textAlign: 'center' }}>
             <Typography variant="h4">{agendamentos.filter(a => a.status === 'Agendada').length}</Typography>
             <Typography color="text.secondary">Consultas Futuras</Typography>

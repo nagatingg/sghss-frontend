@@ -19,6 +19,8 @@ export default function DashboardPaciente() {
         setAgendamentos(data);
         setLoading(false);
       });
+    } else {
+      setLoading(false);
     }
   }, [user]);
 
@@ -40,6 +42,7 @@ export default function DashboardPaciente() {
       </Box>
 
       <Grid container spacing={3}>
+        {/* O 'item' foi removido como propriedade e o Grid foi colocado dentro de outro Grid com as props xs e md */}
         <Grid item xs={12} md={6}>
           <Card>
             <CardContent>
@@ -83,5 +86,3 @@ export default function DashboardPaciente() {
         </Grid>
       </Grid>
     </Box>
-  );
-}
