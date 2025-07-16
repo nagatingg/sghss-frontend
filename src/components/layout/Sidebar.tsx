@@ -10,29 +10,33 @@ import PersonIcon from '@mui/icons-material/Person';
 import GroupIcon from '@mui/icons-material/Group';
 import BarChartIcon from '@mui/icons-material/BarChart';
 
-// Listas de menu para cada perfil
-const pacienteMenu = [
+// Interface para definir o tipo de um item de menu
+interface MenuItem {
+  text: string;
+  icon: React.ReactElement;
+  path: string;
+}
+
+const pacienteMenu: MenuItem[] = [
   { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
   { text: 'Agendamentos', icon: <EventIcon />, path: '/agendamentos' },
 ];
 
-const medicoMenu = [
+const medicoMenu: MenuItem[] = [
   { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
   { text: 'Pacientes', icon: <GroupIcon />, path: '/pacientes' },
 ];
 
-const adminMenu = [
+const adminMenu: MenuItem[] = [
   { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
   { text: 'Usuários', icon: <GroupIcon />, path: '/usuarios' },
   { text: 'Relatórios', icon: <BarChartIcon />, path: '/relatorios' },
 ];
 
-
 export default function Sidebar() {
   const { user } = useAuth();
-  let menuItems = [];
+  let menuItems: MenuItem[] = []; // O tipo foi definido aqui
 
-  // Define o menu com base no perfil do usuário
   switch (user?.role) {
     case 'paciente':
       menuItems = pacienteMenu;
@@ -46,7 +50,7 @@ export default function Sidebar() {
     default:
       break;
   }
-  
+
   return (
     <Box sx={{ width: 240 }} role="presentation">
       <List>
@@ -60,9 +64,7 @@ export default function Sidebar() {
         {menuItems.map((item) => (
           <ListItem key={item.text} disablePadding component={Link} to={item.path} sx={{ color: 'inherit', textDecoration: 'none' }}>
             <ListItemButton>
-              <ListItemIcon>
-                {item.icon}
-              </ListItemIcon>
+              <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItemButton>
           </ListItem>
