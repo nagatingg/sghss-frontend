@@ -1,6 +1,5 @@
 // src/pages/Pacientes.tsx
 
-import React from 'react';
 import {
   Box,
   Typography,

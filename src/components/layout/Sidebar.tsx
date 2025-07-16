@@ -1,5 +1,4 @@
 // src/components/layout/Sidebar.tsx
-import React from 'react';
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Divider } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';

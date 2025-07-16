@@ -1,6 +1,6 @@
 // src/pages/DashboardMedico.tsx
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Typography, Box, Grid, Paper, List, ListItem, ListItemText, CircularProgress, Divider } from '@mui/material';
 import { useAuth } from '../contexts/AuthContext';
 import { getAgendamentosPorMedico } from '../services/api';

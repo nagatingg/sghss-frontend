@@ -1,5 +1,5 @@
 // src/pages/DashboardPaciente.tsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Typography, Box, Grid, Card, CardContent, Button, CircularProgress } from '@mui/material';
 import { Link } from 'react-router-dom';
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
