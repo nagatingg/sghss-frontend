@@ -32,7 +32,6 @@ export default function DashboardMedico() {
       <Typography variant="h4" component="h1" gutterBottom>Dashboard do Médico</Typography>
       <Typography variant="h6" color="text.secondary" sx={{ mb: 4 }}>Bem-vindo(a), {user?.name}!</Typography>
       <Grid container spacing={3}>
-        {/* O 'item' foi removido como propriedade e o Grid foi colocado dentro de outro Grid com as props xs e sm */}
         <Grid item xs={12} sm={6}>
           <Paper sx={{ p: 2, textAlign: 'center' }}>
             <Typography variant="h4">{consultasHoje.length}</Typography>
