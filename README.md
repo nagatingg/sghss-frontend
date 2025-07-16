@@ -1,5 +1,11 @@
 # Sistema de Gestão Hospitalar e de Serviços de Saúde (SGHSS) - Front-End
 
+[![Status do Deploy](https://api.netlify.com/api/v1/badges/e6a5f0b3-3a5b-4c0e-9d2c-9a2c3a3b5e7b/deploy-status)](https://app.netlify.com/sites/bucolic-tiramisu-e76bba/deploys)
+
+**Demonstração Online: [https://bucolic-tiramisu-e76bba.netlify.app/](https://bucolic-tiramisu-e76bba.netlify.app/)**
+
+---
+
 Este repositório contém o código-fonte do front-end do projeto SGHSS, desenvolvido como parte do Projeto Multidisciplinar do curso de Análise e Desenvolvimento de Sistemas. A aplicação simula uma interface para um sistema de gestão hospitalar, com diferentes perfis de usuário e funcionalidades.
 
 ## 🚀 Sobre o Projeto
@@ -17,9 +23,9 @@ A aplicação foi construída com foco em uma arquitetura de componentes reutili
 As seguintes ferramentas e tecnologias foram utilizadas na construção do projeto:
 
 * **[React.js](https://react.dev/)**: Biblioteca principal para a construção da interface de usuário.
-* **[TypeScript](https://www.typescriptlang.org/)**: Superset do JavaScript que adiciona tipagem estática ao código, aumentando a robustez e a manutenibilidade.
+* **[TypeScript](https://www.typescriptlang.org/)**: Superset do JavaScript que adiciona tipagem estática ao código.
 * **[Vite](https://vitejs.dev/)**: Ferramenta de build e servidor de desenvolvimento de alta performance.
-* **[Material-UI (MUI)](https://mui.com/)**: Biblioteca de componentes React para uma estilização rápida e consistente, baseada no Material Design.
+* **[Material-UI (MUI)](https://mui.com/)**: Biblioteca de componentes React para uma estilização rápida e consistente.
 * **[React Router DOM](https://reactrouter.com/)**: Para gerenciamento de rotas e navegação na aplicação.
 
 ## 📂 Estrutura de Pastas
@@ -28,29 +34,12 @@ O projeto foi organizado em uma estrutura de pastas modular para facilitar a loc
 
 ```
 /src
-|-- /assets           # Mídias estáticas (imagens, ícones)
-|-- /components       # Componentes de UI reutilizáveis
-|   |-- /layout       # Componentes de estrutura (Header, Sidebar)
-|
-|-- /contexts         # Contextos React para estado global
-|   |-- AuthContext.tsx # Gerencia a autenticação do usuário
-|
+|-- /components       # Componentes de UI reutilizáveis (Layout, etc.)
+|-- /contexts         # Contextos React para estado global (AuthContext)
 |-- /pages            # Componentes que representam as telas completas
-|   |-- Login.tsx
-|   |-- Dashboard.tsx
-|   |-- Agendamentos.tsx
-|   |-- Pacientes.tsx
-|   |-- Usuarios.tsx
-|
 |-- /routes           # Configuração das rotas da aplicação
-|   |-- index.tsx     # Define as rotas e o controle de acesso
-|
-|-- /services         # Lógica de negócio e simulação de API
-|   |-- api.ts        # Contém os dados mockados e funções
-|
+|-- /services         # Lógica de negócio e simulação de API (api.ts)
 |-- /theme            # Configurações de tema para o Material-UI
-|   |-- theme.ts
-|
 |-- App.tsx             # Componente raiz da aplicação
 |-- main.tsx            # Ponto de entrada da aplicação
 ```
@@ -61,9 +50,8 @@ Para executar este projeto localmente, siga os passos abaixo. Você precisará t
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/SEU-USUARIO/sghss-frontend.git](https://github.com/SEU-USUARIO/sghss-frontend.git)
+    git clone [https://github.com/nagatingg/sghss-frontend.git](https://github.com/nagatingg/sghss-frontend.git)
     ```
-    *(Lembre-se de substituir `SEU-USUARIO` pelo seu nome de usuário no GitHub)*
 
 2.  **Acesse a pasta do projeto:**
     ```bash
@@ -87,16 +75,8 @@ Para executar este projeto localmente, siga os passos abaixo. Você precisará t
 
 Para navegar pela aplicação, utilize as seguintes credenciais de login. A senha para todos os perfis é `123`.
 
-* **Perfil Paciente:**
-    * **Email:** `paciente@sghss.com`
-    * **Senha:** `123`
-
-* **Perfil Médico:**
-    * **Email:** `medico@sghss.com`
-    * **Senha:** `123`
-
-* **Perfil Administrador:**
-    * **Email:** `admin@sghss.com`
-    * **Senha:** `123`
+* **Perfil Paciente:** `paciente@sghss.com`
+* **Perfil Médico:** `medico@sghss.com`
+* **Perfil Administrador:** `admin@sghss.com`
 
 ---
